@@ -39,7 +39,7 @@ $category_terms = Timber::get_terms([
 $terms = array_merge($menu_types_terms, $category_terms);
 
 // Sélectionne aléatoirement 3 termes parmi les termes combinés
-$context["terms"] = get_X_random_terms($terms, 3);
+$context["terms"] = Helpers::get_X_random_terms($terms, 3);
 
 // Récupère les termes associés à la taxonomie `diet`
 $diet_terms = Timber::get_terms([
@@ -50,7 +50,7 @@ $diet_terms = Timber::get_terms([
 $all_terms = array_merge($terms, $diet_terms);
 
 // Sélectionne aléatoirement 9 termes parmi tous les termes combinés
-$context["tags"] = get_X_random_terms($all_terms, 9);
+$context["tags"] = Helpers::get_X_random_terms($all_terms, 9);
 
 // Rend la vue Twig pour la page d'accueil
 Timber::render('templates/index.twig', $context);
