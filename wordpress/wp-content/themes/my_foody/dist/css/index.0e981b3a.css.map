@@ -1,0 +1,1 @@
+{"mappings":"AAAA","sources":["src/scss/main.scss"],"sourcesContent":["@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n@import \"font\";\n@import \"base\";\n@import \"layout\";\n@import \"modules/example\";\n"],"names":[],"version":3,"file":"index.0e981b3a.css.map"}

@@ -1,0 +1,17 @@
+{
+	"apiVersion": 3,
+	"name": "custom/test-block",
+	"title": "Test",
+	"category": "widgets",
+	"version": "0.1.0",
+	"description": "Test second block",
+
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "test-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}

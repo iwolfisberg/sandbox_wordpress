@@ -1,0 +1,29 @@
+<head>
+	{% block head %}
+		<meta charset="{{ site.charset }}"/>
+		<meta name="description" content="{{ site.description }}">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>foody -
+			{% block title %}Accueil
+			{% endblock %}
+		</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link
+		href="https://fonts.googleapis.com/css2?family=Oi&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet"/>
+
+		<!-- WordPress Head -->
+		{{ wp_head()|raw }}
+	{% endblock %}
+</head>
+
+<body class="bg-stone-100">
+	{% block content %}
+		Contenu de la page
+	{% endblock %}
+	{% include 'footer.twig' %}
+	{{ wp_footer()|raw }}
+</body></html>

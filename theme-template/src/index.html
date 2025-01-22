@@ -1,0 +1,125 @@
+<extends src="partials/base.html">
+  <block name="content">
+    <header class="py-8 container">
+      <nav id="menu-nav">
+        <ul class="flex justify-end gap-8 mb-8">
+          <li>
+            <a
+              href=""
+              class="text-gray-700 text-xl font-bold font-text hover:text-gray-500 border-b-2 border-solid border-transparent hover:border-gray-500 transition-all border-gray-700"
+              >Accueil</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="flex justify-center items-center">
+        <h1><a class="font-logo text-8xl" href="index.html">Foody</a></h1>
+      </div>
+      <div
+        class="w-full h-[75vh] mt-8 relative flex justify-center items-center"
+      >
+        <img
+          class="absolute inset-0 w-full h-full object-cover"
+          src="img/food.jpg"
+          alt=""
+        />
+        <form class="bg-white relative p-8 max-w-[40%]" id="search-form">
+          <h2 class="text-6xl font-heading text-primary font-bold">
+            Que souhaitez-vous cuisiner?
+          </h2>
+          <label for="recipe-search" class="sr-only"
+            >Taper pour trouver une recette</label
+          >
+          <input
+            type="text"
+            id="recipe-search"
+            class="w-full p-4 mt-4 border border-gray-300 rounded-lg placeholder-gray-400 text-gray-700"
+            placeholder="Taper pour trouver une recette"
+          />
+          <ul class="mt-4 flex flex-wrap gap-4" id="popular-research-items">
+            <li>
+              <include src="partials/button.html"
+                >{"text": "Plat principal"}</include
+              >
+            </li>
+            <li>
+              <include src="partials/button.html"
+                >{"text": "Végétarien"}</include
+              >
+            </li>
+            <li>
+              <include src="partials/button.html"
+                >{"text": "Végétalien"}</include
+              >
+            </li>
+            <li>
+              <include src="partials/button.html">{"text": "Dessert"}</include>
+            </li>
+            <li>
+              <include src="partials/button.html">{"text": "Soupe"}</include>
+            </li>
+            <li>
+              <include src="partials/button.html">{"text": "Hiver"}</include>
+            </li>
+            <li>
+              <include src="partials/button.html"
+                >{"text": "Printemps"}</include
+              >
+            </li>
+            <li>
+              <include src="partials/button.html">{"text": "Pâtes"}</include>
+            </li>
+            <li>
+              <include src="partials/button.html">{"text": "Salade"}</include>
+            </li>
+          </ul>
+          <button type="submit" class="sr-only">Soumettre le formulaire</button>
+        </form>
+      </div>
+    </header>
+
+    <main class="container max-w-[1024px]">
+      <section class="mt-4">
+        <h2 class="text-6xl font-heading text-gray-700 text-center font-400">
+          Découvrir les catégories de recettes
+        </h2>
+        <ul class="grid grid-cols-12 gap-4 mt-8">
+          <li class="col-span-4">
+            <include src="partials/category-card.html"
+              >{"text": "Recettes de riz"}</include
+            >
+          </li>
+          <li class="col-span-4">
+            <include src="partials/category-card.html"
+              >{"text": "Recettes de soupe"}</include
+            >
+          </li>
+          <li class="col-span-4">
+            <include src="partials/category-card.html"
+              >{"text": "Recettes de pâtes"}</include
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="mt-12">
+        <h2 class="text-6xl font-heading text-gray-700 text-center font-400">
+          Dernières recettes ajoutées
+        </h2>
+        <ul class="grid grid-cols-12 gap-4 mt-8">
+          <li class="col-span-3">
+            <include src="partials/recipe-card.html"></include>
+          </li>
+          <li class="col-span-3">
+            <include src="partials/recipe-card.html"></include>
+          </li>
+          <li class="col-span-3">
+            <include src="partials/recipe-card.html"></include>
+          </li>
+          <li class="col-span-3">
+            <include src="partials/recipe-card.html"></include>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </block>
+</extends>

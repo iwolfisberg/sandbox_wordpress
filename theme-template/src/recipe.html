@@ -1,0 +1,202 @@
+<extends src="partials/base.html">
+  <block name="content">
+    <header class="container py-8">
+      <div class="flex justify-center items-center">
+        <h1 class="mb-4">
+          <a class="font-logo text-8xl" href="index.html">Foody</a>
+        </h1>
+      </div>
+      <div class="relative">
+        <div class="w-[70%] h-[75vh]">
+          <img class="object-cover w-full h-full" src="img/food.jpg" alt="" />
+        </div>
+        <div class="h-full flex items-center absolute right-0 top-0 w-[32%]">
+          <div class="bg-white border-2 border-gray-100 p-4 w-full">
+            <h1 class="text-primary text-heading text-4xl mb-4 uppercase">
+              Poulet rôti
+            </h1>
+            <div class="flex gap-2">
+              <include src="partials/button.html">{"text": "Dessert"}</include>
+              <include src="partials/button.html"
+                >{"text": "Végétarien"}</include
+              >
+              <include src="partials/button.html">{"text": "Hiver"}</include>
+            </div>
+            <div class="flex flex-col mt-8">
+              <p
+                class="text-sm text-gray-500 font-text flex gap-2 items-center"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="100"
+                    height="100"
+                    viewBox="0 0 50 50"
+                    class="w-4 h-4 fill-gray-500"
+                  >
+                    <path
+                      d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z"
+                    ></path>
+                  </svg>
+                </span>
+                <span> Végétarien </span>
+              </p>
+              <p
+                class="text-sm text-gray-500 font-text flex gap-2 items-center"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 48 48"
+                    class="w-4 h-4 fill-gray-500"
+                  >
+                    <path
+                      d="M 21.5 3 A 1.50015 1.50015 0 1 0 21.5 6 L 22.5 6 L 22.5 8.0761719 C 13.276989 8.842722 6 16.582823 6 26 C 6 35.923357 14.076636 44 24 44 C 33.923364 44 42 35.923357 42 26 C 42 21.577219 40.3896 17.528171 37.732422 14.390625 L 39.556641 12.564453 A 1.50015 1.50015 0 0 0 38.466797 9.9902344 A 1.50015 1.50015 0 0 0 37.435547 10.443359 L 35.609375 12.267578 C 32.830917 9.9145087 29.335848 8.3949799 25.5 8.0761719 L 25.5 6 L 26.5 6 A 1.50015 1.50015 0 1 0 26.5 3 L 21.5 3 z M 23.822266 11.009766 A 1.50015 1.50015 0 0 0 24.185547 11.009766 C 28.220081 11.058889 31.863047 12.68515 34.527344 15.308594 A 1.5012209 1.5012209 0 0 0 34.685547 15.466797 C 37.353026 18.172834 39 21.887902 39 26 C 39 34.302039 32.302045 41 24 41 C 15.697955 41 9 34.302039 9 26 C 9 17.757971 15.603517 11.105631 23.822266 11.009766 z M 30.470703 17.986328 A 1.50015 1.50015 0 0 0 29.439453 18.439453 L 24.773438 23.105469 A 3 3 0 0 0 24 23 A 3 3 0 0 0 24 29 A 3 3 0 0 0 26.896484 25.224609 L 31.560547 20.560547 A 1.50015 1.50015 0 0 0 30.470703 17.986328 z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>30 min de prép | 1 h 40 min en tout</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container max-w-[1024px] grid grid-cols-12 bg-white">
+        <aside
+          class="col-span-4 py-8 px-4 relative after:bg-gray-100 after:w-0.5 after:absolute after:top-3 after:bottom-3 after:right-0"
+        >
+          <h2 class="text-primary text-4xl font-heading uppercase text-center">
+            Il vous faut
+          </h2>
+          <div class="flex items-center gap-4 justify-center">
+            <button
+              aria-label="Diminuer le nombre de personne"
+              class="btn-quantity btn-diminish bg-secondary rounded-full p-4 text-white text-2xl w-10 h-10 flex items-center justify-center hover:bg-secondary/80"
+            >
+              -
+            </button>
+            <p
+              class="font-text text-sm text-center text-gray-500 flex flex-col"
+            >
+              <span
+                id="number-person"
+                data-person="2"
+                class="font-text font-bold text-xl text-center text-gray-700"
+                >2</span
+              >
+              personnes
+            </p>
+            <button
+              aria-label="Augmenter le nombre de personne"
+              class="btn-quantity btn-increase bg-secondary rounded-full p-4 text-white text-2xl w-10 h-10 flex items-center justify-center hover:bg-secondary/80"
+            >
+              +
+            </button>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-heading text-2xl font-bold mb-2">Panettone</h3>
+            <ul>
+              <li class="flex space-between text-sm text-gray-700 font-text">
+                <span
+                  class="w-1/3 font-semibold quantity"
+                  data-quantity="50"
+                  data-unit="g."
+                  >100 g.</span
+                ><span class="w-2/3">de panettone coupé en dés </span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-heading text-2xl font-bold mb-2">Crème</h3>
+            <ul>
+              <li class="flex space-between text-sm text-gray-700 font-text">
+                <span
+                  class="w-1/3 font-semibold quantity"
+                  data-quantity="62.5"
+                  data-unit="g."
+                  >125 g.</span
+                ><span>de mascarpone</span>
+              </li>
+              <li class="flex space-between text-sm text-gray-700 font-text">
+                <span
+                  class="w-1/3 font-semibold quantity"
+                  data-quantity="0.5"
+                  data-unit="cs"
+                  >1 cs</span
+                ><span>de sucre glace</span>
+              </li>
+              <li class="flex space-between text-sm text-gray-700 font-text">
+                <span
+                  class="w-1/3 font-semibold quantity"
+                  data-quantity="1"
+                  data-unit="cs"
+                  >2 cs</span
+                ><span>d’Amaretto ou de jus d'orange </span>
+              </li>
+              <li class="flex space-between text-sm text-gray-700 font-text">
+                <span
+                  class="w-1/3 font-semibold quantity"
+                  data-quantity="0.5"
+                  data-unit="dl"
+                  >1 dl</span
+                ><span>de crème entière, fouettée</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <section class="col-span-8 py-8 px-4">
+          <h2 class="text-primary text-4xl font-heading uppercase text-center">
+            Voici comment faire
+          </h2>
+          <div class="flex flex-col gap-4">
+            <div>
+              <h3 class="font-heading text-2xl font-bold mb-2">Panettone</h3>
+
+              <p class="text-base font-text">
+                Faire dorer les dés de panettone dans une poêle sans matière
+                grasse et les laisser refroidir.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-heading text-2xl font-bold mb-2">Crème</h3>
+              <p class="text-base font-text">
+                Mélanger le mascarpone, le sucre, l'amaretto ou le jus d'orange,
+                incorporer délicatement la crème fouettée. Remplir les verres en
+                alternant crème et dés de panettone.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="bg-gray-200 mt-12">
+        <section class="container py-8 max-w-[1024px]">
+          <h2 class="text-6xl font-heading text-gray-700 text-center font-400">
+            Recettes similaires
+          </h2>
+          <ul class="grid grid-cols-12 gap-4 mt-8">
+            <li class="col-span-3">
+              <include src="partials/recipe-card.html"></include>
+            </li>
+            <li class="col-span-3">
+              <include src="partials/recipe-card.html"></include>
+            </li>
+            <li class="col-span-3">
+              <include src="partials/recipe-card.html"></include>
+            </li>
+            <li class="col-span-3">
+              <include src="partials/recipe-card.html"></include>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </block>
+</extends>

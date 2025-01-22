@@ -1,0 +1,96 @@
+<extends src="partials/base.html">
+  <block name="content">
+    <header class="py-8 container">
+      <div class="flex justify-center items-center">
+        <h1><a class="font-logo text-8xl" href="index.html">Foody</a></h1>
+      </div>
+      <div
+        class="w-full h-[75vh] mt-8 relative flex justify-center items-center"
+      >
+        <img
+          class="absolute inset-0 w-full h-full object-cover"
+          src="img/food.jpg"
+          alt=""
+        />
+        <div class="bg-white relative p-8 max-w-[40%]">
+          <h2 class="text-6xl font-heading text-primary font-bold text-center">
+            Plat principal
+          </h2>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="bg-secondary/20 container">
+        <form action="" class="w-full flex container max-w-[1024px]">
+          <select
+            class="flex-1 bg-transparent px-4 pl-3 pr-8 font-text uppercase text-secondary border-x-1 border-white border-y-0"
+          >
+            <option value="">Type de menu</option>
+            <option value="Végétarien">Apéritif</option>
+            <option value="Végétalien">Plat principal</option>
+            <option value="no-lactose">Entrée</option>
+            <option value="no-gluten">Dessert</option>
+          </select>
+          <select
+            class="flex-1 bg-transparent px-4 pl-3 pr-8 font-text uppercase text-secondary border-x-1 border-white border-y-0"
+          >
+            <option value="">Mode d'alimentation</option>
+            <option value="Végétarien">Végétarien</option>
+            <option value="Végétalien">Végétalien</option>
+            <option value="no-lactose">Sans lactose</option>
+            <option value="no-gluten">Sans glutent</option>
+          </select>
+          <select
+            class="flex-1 bg-transparent px-4 pl-3 pr-8 font-text uppercase text-secondary border-x-1 border-white border-y-0"
+          >
+            <option value="">Temps nécessaire</option>
+            <option value="Végétarien">< 15 min.</option>
+            <option value="Végétalien">< 30 min.</option>
+            <option value="no-lactose">< 1h.</option>
+          </select>
+          <select
+            class="flex-1 bg-transparent px-4 pl-3 pr-8 font-text uppercase text-secondary border-x-1 border-white border-y-0"
+          >
+            <option value="">Saisonnalité</option>
+            <option value="Végétarien">Hiver</option>
+            <option value="Végétalien">Printemps</option>
+            <option value="no-lactose">Eté</option>
+            <option value="no-lactose">Automne</option>
+          </select>
+          <button type="submit" class="sr-only">Soumettre</button>
+        </form>
+      </div>
+      <section class="mt-12 container max-w-[1024px]">
+        <p class="font-text font-bold text-xl">123 résultats trouvés</p>
+        <ul class="grid grid-cols-12 gap-4 mt-2">
+          <li class="col-span-4">
+            <include src="partials/recipe-card.html"></include>
+          </li>
+          <li class="col-span-4">
+            <include src="partials/recipe-card.html"></include>
+          </li>
+          <li class="col-span-4">
+            <include src="partials/recipe-card.html"></include>
+          </li>
+          <li class="col-span-4">
+            <include src="partials/recipe-card.html"></include>
+          </li>
+        </ul>
+        <div class="flex items-center justify-center py-8 gap-8">
+          <a
+            href="#"
+            class="border-secondary border-2 text-secondary text-xl py-4 px-6 hover:bg-secondary hover:text-white transition-all font-text"
+          >
+            Voir la page précédente
+          </a>
+          <a
+            href="/"
+            class="border-secondary border-2 text-secondary text-xl py-4 px-6 hover:bg-secondary hover:text-white transition-all font-text"
+          >
+            Voir la page suivante
+          </a>
+        </div>
+      </section>
+    </main>
+  </block>
+</extends>

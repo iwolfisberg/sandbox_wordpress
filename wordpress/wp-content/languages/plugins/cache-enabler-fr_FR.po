@@ -1,0 +1,262 @@
+# Translation of Plugins - Cache Enabler - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - Cache Enabler - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-05-03 14:02:46+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - Cache Enabler - Stable (latest release)\n"
+
+#. translators: 1. Cache Enabler 2. /path/to/wp-content/cache 3. 755 4. file
+#. permissions
+#: inc/cache_enabler.class.php:2377
+msgid "%1$s requires the directory %2$s to exist and be writable (mode %3$s, for example). Please create it and/or change its %4$s."
+msgstr "%1$s nécessite que le répertoire %2$s existe et soit accessible en écriture (mode %3$s, par exemple). Le créer et/ou modifier son %4$s."
+
+#: inc/cache_enabler.class.php:1208
+msgid "Empty"
+msgstr "Vide"
+
+#: inc/cache_enabler.class.php:1209
+msgid "Cache Size"
+msgstr "Taille du cache"
+
+#. Author of the plugin
+msgid "KeyCDN"
+msgstr "KeyCDN"
+
+#. Author URI of the plugin
+msgid "https://www.keycdn.com"
+msgstr "https://www.keycdn.com"
+
+#: inc/cache_enabler.class.php:1151
+msgid "Settings"
+msgstr "Réglages"
+
+#: inc/cache_enabler.class.php:2597
+msgid "Cache Behavior"
+msgstr "Comportement du cache"
+
+#: inc/cache_enabler.class.php:2709
+msgid "Cache Exclusions"
+msgstr "Exclusions du cache"
+
+#: inc/cache_enabler.class.php:2402 inc/cache_enabler.class.php:2562
+msgid "Cache Enabler Settings"
+msgstr "Réglages de Cache Enabler"
+
+#: inc/cache_enabler.class.php:2617
+msgid "Clearing"
+msgstr "Effacement"
+
+#: inc/cache_enabler.class.php:2601
+msgid "Expiration"
+msgstr "Expiration"
+
+#: inc/cache_enabler_cli.class.php:92
+msgid "Sites cache cleared."
+msgstr "Cache des sites effacé."
+
+#: inc/cache_enabler_cli.class.php:82
+msgid "Page cache cleared."
+msgstr "Cache de page effacé."
+
+#: inc/cache_enabler_cli.class.php:80
+msgid "Pages cache cleared."
+msgstr "Cache de pages effacé."
+
+#: inc/cache_enabler.class.php:2763
+msgid "Save Changes and Clear Site Cache"
+msgstr "Enregistrer les modifications et effacer le cache de site"
+
+#: inc/cache_enabler.class.php:2762
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+#: inc/cache_enabler.class.php:2749
+msgid "Cookies"
+msgstr "Cookies"
+
+#: inc/cache_enabler.class.php:2744 inc/cache_enabler.class.php:2754
+msgid "Default if unset:"
+msgstr "Par défaut si non configuré :"
+
+#: inc/cache_enabler.class.php:2739
+msgid "Query Strings"
+msgstr "Chaînes de requête"
+
+#: inc/cache_enabler.class.php:2730
+msgid "Page Paths"
+msgstr "Chemins d’accès de page"
+
+#: inc/cache_enabler.class.php:2725 inc/cache_enabler.class.php:2734
+#: inc/cache_enabler.class.php:2743 inc/cache_enabler.class.php:2753
+msgid "Example:"
+msgstr "Exemple :"
+
+#: inc/cache_enabler.class.php:2713
+msgid "Post IDs"
+msgstr "ID des publications"
+
+#: inc/cache_enabler.class.php:2689
+msgid "including"
+msgstr "comprenant"
+
+#: inc/cache_enabler.class.php:2688
+msgid "excluding"
+msgstr "excluant"
+
+#: inc/cache_enabler.class.php:2681
+msgid "Minification"
+msgstr "Minification"
+
+#: inc/cache_enabler.class.php:2676
+msgid "Create a cached version pre-compressed with Gzip."
+msgstr "Créer une version mise en cache pré-compressée avec Gzip."
+
+#: inc/cache_enabler.class.php:2676
+msgid "Create a cached version pre-compressed with Brotli or Gzip."
+msgstr "Créer une version en cache pré-compressée avec Brotli ou Gzip."
+
+#: inc/cache_enabler.class.php:2669
+msgid "Create a cached version for mobile devices."
+msgstr "Créer une version mise en cache pour les appareils mobiles."
+
+#. translators: %s: Optimus
+#: inc/cache_enabler.class.php:2659
+msgid "Create a cached version for WebP support. Convert your images to WebP with %s."
+msgstr "Créer une version mise en cache pour la prise en charge de WebP. Convertissez vos images en WebP avec %s."
+
+#: inc/cache_enabler.class.php:2653
+msgid "Versions"
+msgstr "Versions"
+
+#: inc/cache_enabler.class.php:2648
+msgid "Clear the site cache if a plugin has been activated or deactivated."
+msgstr "Vider le cache du site si une extension a été activée ou désactivée."
+
+#: inc/cache_enabler.class.php:2641
+msgid "Clear the site cache if a user has been added, updated, or deleted (instead of the user cache)."
+msgstr "Effacer le cache du site si un utilisateur/utilisatrice a été ajouté, mis à jour ou supprimé (au lieu du cache de l’utilisateur/utilisatrice)."
+
+#: inc/cache_enabler.class.php:2634
+msgid "Clear the site cache if a term has been added, updated, or deleted (instead of the term cache)."
+msgstr "Vider le cache du site si un terme a été ajouté, mis à jour ou supprimé (au lieu du cache de termes)."
+
+#: inc/cache_enabler.class.php:2627
+msgid "Clear the site cache if a comment has been posted, updated, spammed, or trashed (instead of the comment cache)."
+msgstr "Vider le cache du site si un commentaire a été publié, mis à jour, spammé ou mis à la corbeille (au lieu du cache des commentaires)."
+
+#: inc/cache_enabler.class.php:2620
+msgid "Clear the site cache if any post type has been published, updated, or trashed (instead of the post cache)."
+msgstr "Vider le cache du site si un type de publication a été publié, mis à jour ou mis à la corbeille (au lieu du cache de publication)."
+
+#. translators: %s: Form field input for number of hours.
+#: inc/cache_enabler.class.php:2609
+msgid "Cached pages expire %s hours after being created."
+msgstr "Les pages mises en cache expirent %s heures après leur création."
+
+#. translators: %s: KeyCDN
+#: inc/cache_enabler.class.php:2585
+msgid "Combine Cache Enabler with %s for even better WordPress performance and achieve the next level of caching with a CDN."
+msgstr "Combiner Cache Enabler avec %s pour des performances WordPress encore meilleures et atteindre un niveau supérieur de mise en cache avec un CDN."
+
+#. translators: 1. Cache Enabler 2. define( 'WP_CACHE', true ); 3.
+#. wp-config.php 4. require_once ABSPATH . 'wp-settings.php';
+#: inc/cache_enabler.class.php:2570
+msgid "%1$s requires %2$s to be set. Please set this in the %3$s file (must be before %4$s)."
+msgstr "%1$s nécessite que %2$s soit défini. Le définir dans le fichier %3$s (doit être avant %4$s)."
+
+#: inc/cache_enabler.class.php:2384
+msgid "file permissions"
+msgstr "autorisations de fichier"
+
+#: inc/cache_enabler.class.php:2355
+msgid "Permalink Settings"
+msgstr "Réglages des permaliens"
+
+#. translators: 1. Cache Enabler 2. WordPress version (e.g. 5.1)
+#: inc/cache_enabler.class.php:2307
+msgid "%1$s requires WordPress %2$s or higher to function properly. Please update WordPress or disable the plugin."
+msgstr "%1$s nécessite WordPress %2$s ou supérieur pour fonctionner correctement. Mettre à jour WordPress ou désactiver l’extension."
+
+#: inc/cache_enabler.class.php:1377 inc/cache_enabler_cli.class.php:70
+#: inc/cache_enabler_cli.class.php:94
+msgid "Site cache cleared."
+msgstr "Cache du site effacé."
+
+#: inc/cache_enabler.class.php:1377 inc/cache_enabler_cli.class.php:70
+msgid "Network cache cleared."
+msgstr "Cache réseau effacé."
+
+#: inc/cache_enabler.class.php:1255 inc/cache_enabler.class.php:1256
+msgid "Clear Page Cache"
+msgstr "Vider le cache de page"
+
+#: inc/cache_enabler.class.php:1231
+msgid "Clear Site Cache"
+msgstr "Effacer le cache du site"
+
+#: inc/cache_enabler.class.php:1231
+msgid "Clear Network Cache"
+msgstr "Effacer le cache réseau"
+
+#: inc/cache_enabler.class.php:1178
+msgid "Documentation"
+msgstr "Documentation"
+
+#. Description of the plugin
+msgid "Simple and fast WordPress caching plugin."
+msgstr "Une extension simple et rapide pour la mise en cache de WordPress."
+
+#. Plugin Name of the plugin
+msgid "Cache Enabler"
+msgstr "Activateur de cache"
+
+#. translators: 1. Cache Enabler 2. PHP version (e.g. 5.6)
+#: inc/cache_enabler.class.php:2294
+msgid "%1$s requires PHP %2$s or higher to function properly. Please update PHP or disable the plugin."
+msgstr "%1$s nécessite PHP %2$s ou supérieur pour fonctionner correctement. Veuillez mettre à jour PHP ou désactiver l’extension."
+
+#. translators: 1. Autoptimize 2. Cache Enabler Settings
+#: inc/cache_enabler.class.php:2397
+msgid "%1$s HTML optimization is enabled. Please disable HTML minification in the %2$s."
+msgstr "L’optimisation HTML %1$s est activée. Veuillez désactiver la minification HTML dans les %2$s."
+
+#. translators: 1. Cache Enabler 2. Permalink Settings
+#: inc/cache_enabler.class.php:2350
+msgid "%1$s requires a custom permalink structure. Please enable a custom structure in the %2$s."
+msgstr "%1$s nécessite une structure de permaliens personnalisée. Veuillez activer une structure personnalisée dans le %2$s."
+
+#. translators: 1. Cache Enabler 2. /path/to/index.php 3.
+#. CACHE_ENABLER_INDEX_FILE 4. wp-config.php
+#: inc/cache_enabler.class.php:2335
+msgid "%1$s was unable to find the WordPress installation directory index file at %2$s. Please define the %3$s constant in your %4$s file as the full path to the location of this file."
+msgstr "%1$s n’a pas pu trouver le fichier d’index du répertoire d’installation de WordPress à %2$s. Veuillez définir la constante %3$s dans le fichier %4$s comme chemin d’accès complet à l’emplacement de ce fichier."
+
+#: inc/cache_enabler.class.php:2752
+msgid "A regex matching cookies that should bypass the cache."
+msgstr "Une expression régulière correspondant aux cookies qui doivent contourner le cache."
+
+#: inc/cache_enabler.class.php:2742
+msgid "A regex matching query strings that should bypass the cache."
+msgstr "Une expression régulière correspondant aux chaînes de requête qui doivent contourner le cache."
+
+#: inc/cache_enabler.class.php:2733
+msgid "A regex matching page paths that should bypass the cache."
+msgstr "Une expression régulière correspondant aux chemins de page qui doivent contourner le cache."
+
+#. translators: %s: ,
+#: inc/cache_enabler.class.php:2720
+msgid "Post IDs separated by a %s that should bypass the cache."
+msgstr "ID de publication séparés par un %s qui doivent contourner le cache."
+
+#. translators: %s: Form field control for 'excluding' or 'including' inline
+#. CSS and JavaScript during HTML minification.
+#: inc/cache_enabler.class.php:2698
+msgid "Minify HTML in cached pages %s inline CSS and JavaScript."
+msgstr "Minifier le HTML dans les pages en cache %s le CSS et le JavaScript en ligne."

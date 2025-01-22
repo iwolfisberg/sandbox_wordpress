@@ -1,0 +1,87 @@
+{% extends "base.twig" %}
+
+{% block title %}
+	{% if search_query %}
+		Recettes pour
+		{{ search_query }}
+	{% else %}
+		Recherche
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<header class="py-8 container">
+		{% include 'partial/header-nav.twig' %}
+		<div class="flex justify-center items-center">
+			<h1>
+				<a class="font-logo text-8xl" href="{{ home_url }}">Foody</a>
+			</h1>
+		</div>
+		<div class="w-full h-[75vh] mt-8 relative flex justify-center items-center">
+			<img class="absolute inset-0 w-full h-full object-cover" src="{{ current_page.thumbnail.src }}" alt=""/>
+			{% include 'partial/search-form.twig' with {'tags': tags} %}
+		</div>
+	</header>
+	<main>
+		<h1 class="sr-only">Recherche</h1>
+		<div class="bg-secondary/20 container">
+			<form method="GET" action="{{ current_page.link }}" id="filter-form" class="w-full flex container max-w-[1024px]">
+				<input type="hidden" name="s" value="{{ search_query ?? '' }}"/>
+				<select class="flex-1 bg-transparent px-4 pl-3 pr-8 font-text uppercase text-secondary border-x-1 border-white border-y-0" name="menu_types">
+					<option value="">Type de menu</option>
+					{% for menu_type in menu_types %}
+						<option value="{{ menu_type.slug }}" {{ menu_type.active ? "selected" : "" }}>{{ menu_type.name }}</option>
+					{% endfor %}
+				</select>
+				<select class="flex-1 bg-transparent px-4 pl-3 pr-8 font-text uppercase text-secondary border-x-1 border-white border-y-0" name="diet">
+					<option value="">Mode d'alimentation</option>
+					{% for diet in diets %}
+						<option value="{{ diet.slug }}" {{ diet.active ? "selected" : "" }}>{{ diet.name }}</option>
+					{% endfor %}
+				</select>
+
+				<select class="flex-1 bg-transparent px-4 pl-3 pr-8 font-text uppercase text-secondary border-x-1 border-white border-y-0" name="total_time">
+					<option value="">Temps nécessaire</option>
+					<option value="15" {{ total_time_filter and total_time_filter == 15 ? "selected" : "" }}>
+						moins de 15 min.</option>
+					<option value="30" {{ total_time_filter and total_time_filter == 30 ? "selected" : "" }}>
+						moins de 30 min.</option>
+					<option value="60" {{ total_time_filter and total_time_filter == 60 ? "selected" : "" }}>
+						moins de 1h.</option>
+				</select>
+				<select class="flex-1 bg-transparent px-4 pl-3 pr-8 font-text uppercase text-secondary border-x-1 border-white border-y-0" name="category">
+					<option value="">Saisonnalité</option>
+					{% for category in categories %}
+						<option value="{{ category.slug }}" {{ category.active ? "selected" : "" }}>{{ category.name }}</option>
+					{% endfor %}
+				</select>
+				<button type="submit" class="sr-only">Soumettre</button>
+
+			</form>
+		</div>
+		<section class="mt-12 container max-w-[1024px]">
+			<p class="font-text font-bold text-xl">{{ recipes.found_posts }}
+				{{ recipes.found_posts == 1 ? "résultat trouvé" : "résultats trouvés" }}</p>
+			<ul class="grid grid-cols-12 gap-4 mt-2">
+				{% for recipe in recipes %}
+					<li class="col-span-4">
+						{% include 'partial/recipe-card.twig' with {'recipe': recipe} %}
+					</li>
+				{% endfor %}
+			</ul>
+
+			<div class="flex items-center justify-center py-8 gap-8">
+				{% if recipes.pagination.prev %}
+					<a href="{{ recipes.pagination.prev.link }}" class="border-secondary border-2 text-secondary text-xl py-4 px-6 hover:bg-secondary hover:text-white transition-all font-text">
+						Voir la page précédente
+					</a>
+				{% endif %}
+				{% if recipes.pagination.next %}
+					<a href="{{ recipes.pagination.next.link }}" class="border-secondary border-2 text-secondary text-xl py-4 px-6 hover:bg-secondary hover:text-white transition-all font-text">
+						Voir la page suivante
+					</a>
+				{% endif %}
+			</div>
+		</section>
+	</main>
+{% endblock %}

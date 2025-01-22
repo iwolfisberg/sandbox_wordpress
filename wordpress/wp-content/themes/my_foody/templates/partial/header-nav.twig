@@ -1,0 +1,11 @@
+<nav id="menu-nav">
+	<ul class="flex justify-end gap-8 mb-8">
+		{% for item in primary_menu.items %}
+			<li>
+				<a href="{{ item.link }}" class="text-gray-700 text-xl font-bold font-text hover:text-gray-500 border-b-2 border-solid {{ item.active ? 'border-gray-700' : 'border-transparent' }} hover:border-gray-500 transition-all">
+					{{item.name}}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</nav>

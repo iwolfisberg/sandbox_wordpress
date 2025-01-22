@@ -1,0 +1,44 @@
+{% extends "base.twig" %}
+{% block title %}Accueil
+{% endblock %}
+
+{% block content %}
+	<header class="py-8 container">
+		{% include 'partial/header-nav.twig' %}
+		<div class="flex justify-center items-center">
+			<a class="font-logo text-8xl mb-4" href="{{ home_url }}">Foody</a>
+		</div>
+		<div class="w-full h-[75vh] mt-8 relative flex justify-center items-center">
+			<img class="absolute inset-0 w-full h-full object-cover" src="{{ current_page.thumbnail.src }}" alt=""/>
+			{% include 'partial/search-form.twig' with {'tags': tags} %}
+		</div>
+	</header>
+
+	<main class="container max-w-[1024px]">
+		<h1 class="sr-only">Accueil</h1>
+		<section class="mt-4">
+			<h2 class="text-6xl font-heading text-gray-700 text-center font-400">
+				Découvrir les catégories de recettes
+			</h2>
+			<ul class="grid grid-cols-12 gap-4 mt-8">
+				{% for term in terms %}
+					<li class="col-span-4">
+						{% include 'partial/category-card.twig' with {'term': term} %}
+					</li>
+				{% endfor %}
+			</ul>
+		</section>
+		<section class="mt-12">
+			<h2 class="text-6xl font-heading text-gray-700 text-center font-400">
+				Dernières recettes ajoutées
+			</h2>
+			<ul class="grid grid-cols-12 gap-4 mt-8">
+				{% for recipe in latest_recipes %}
+					<li class="col-span-3">
+						{% include 'partial/recipe-card.twig' with {'recipe': recipe} %}
+					</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</main>
+{% endblock %}

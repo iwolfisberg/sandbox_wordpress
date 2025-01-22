@@ -1,0 +1,17 @@
+<div class="bg-white relative p-8 max-w-[40%]">
+	<form id="search-form" method="get" action="{{ search_page_url }}" class="relative">
+		<h2 class="text-6xl font-heading text-primary font-bold">
+			Que souhaitez-vous cuisiner?
+		</h2>
+		<label for="recipe-search" class="sr-only">Taper pour trouver une recette</label>
+		<input type="text" name="s" value="{{ search_query ?? '' }}" id="recipe-search" class="w-full p-4 mt-4 border border-gray-300 rounded-lg placeholder-gray-400 text-gray-700" placeholder="Taper pour trouver une recette"/>
+		<button type="submit" class="sr-only">Soumettre le formulaire</button>
+	</form>
+	<ul class="mt-4 flex flex-wrap gap-4" id="popular-research-items">
+		{% for tag in tags %}
+			<li>
+				{% include 'partial/button.twig' with {'text': tag.name, 'element': 'a', 'url': front_page ~ '?' ~ tag.taxonomy ~ '=' ~ tag.slug} %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>
